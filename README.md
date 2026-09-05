@@ -40,7 +40,7 @@ Run manually:
 Output on success:
 
 ```
-Report generated: /home/hamza/aws_reports/resource_report_2026-09-05_08-00-00.txt
+Report generated: /$HOME/aws_reports/resource_report_2026-09-05_08-00-00.txt
 ```
 
 ## Output files
@@ -83,7 +83,7 @@ crontab -e
 Add:
 
 ```
-0 8 * * * /home/hamza/scripts/aws_resource_tracker.sh
+0 8 * * * /$HOME/scripts/aws_resource_tracker.sh
 ```
 
 Since cron runs with a minimal environment, use the **full path** to the script, and confirm `aws` and `jq` are reachable from cron's `PATH` (test with `which aws` and `which jq`, and hardcode those paths in the script if needed).
@@ -94,7 +94,7 @@ Edit these variables near the top of the script to change behavior:
 
 | Variable | Default | Purpose |
 |---|---|---|
-| `REPORT_DIR` | `/home/hamza/aws_reports` | Where reports and the log file are stored |
+| `REPORT_DIR` | `/$HOME/aws_reports` | Where reports and the log file are stored |
 
 ## Exit codes
 
