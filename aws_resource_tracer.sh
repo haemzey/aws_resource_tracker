@@ -2,14 +2,14 @@
 ##############################################################################
 # Script:  aws_resource_tracker.sh
 # Purpose: Generates a report of current AWS resource usage:
-#          S3 buckets, EC2 instances, Lambda functions, IAM users.
+# S3 buckets, EC2 instances, Lambda functions, IAM users.
 # Usage:   ./aws_resource_tracker.sh
-# Cron:    0 8 * * * /home/hamza/scripts/aws_resource_tracker.sh
+# Cron:    0 8 * * * /$HOME/scripts/aws_resource_tracker.sh
 ##############################################################################
 
 set -uo pipefail
 
-REPORT_DIR="/home/hamza/aws_reports"
+REPORT_DIR="/$HOME/aws_reports"
 DATE=$(date +%Y-%m-%d_%H-%M-%S)
 REPORT_FILE="${REPORT_DIR}/resource_report_${DATE}.txt"
 LOG_FILE="${REPORT_DIR}/tracker.log"
